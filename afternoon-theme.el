@@ -268,8 +268,9 @@
    `(git-gutter-fr:deleted ((,class (:foreground ,red :weight bold))))
    `(link ((,class (:foreground ,blue :underline t :weight bold))))
    `(widget-button ((,class (:underline t))))
-   `(widget-field ((,class (:background ,current-line
-                                        :foreground "LightGoldenrod"))))
+   `(widget-field ((,class (:background "VioletRed4"
+                                        :foreground "LightGoldenrod"
+                                        :box (:line-width (3 . 1) :color "black" :style flat-button)))))
    ;; Compilation (most faces politely inherit from 'success, 'error, 'warning etc.)
    `(compilation-column-number ((,class (:foreground ,yellow))))
    `(compilation-line-number ((,class (:foreground ,yellow))))
