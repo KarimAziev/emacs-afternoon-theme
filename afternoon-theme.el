@@ -6,7 +6,7 @@
 ;; Keywords: faces
 ;; URL: http://github.com/osener/emacs-afternoon-theme
 ;; Version: 0.1
-;; Package-Requires: ((emacs "24.1"))
+;; Package-Requires: ((emacs "26.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -96,30 +96,23 @@
                                                  :color ,red)))))
    `(flycheck-warning ((,class (:underline (:style wave
                                                    :color ,orange)))))
-   ;; Flymake
-   `(flymake-warnline ((,class (:underline (:style wave
-                                                   :color ,orange)
-                                           :background ,background))))
-   `(flymake-errline ((,class (:underline (:style wave
-                                                  :color ,red)
-                                          :background ,background))))
    ;; Clojure errors
    `(clojure-test-failure-face
      ((,class (:background unspecified
-                           :inherit flymake-warnline))))
+                           :inherit flymake-warning))))
    `(clojure-test-error-face ((,class (:background unspecified
-                                                   :inherit flymake-errline))))
+                                                   :inherit flymake-error))))
    `(clojure-test-success-face ((,class (:background unspecified
                                                      :foreground unspecified
                                                      :underline ,green))))
    ;; EDTS errors
    `(edts-face-warning-line ((t (:background unspecified
-                                             :inherit flymake-warnline))))
+                                             :inherit flymake-warning))))
    `(edts-face-warning-mode-line ((,class (:background unspecified
                                                        :foreground ,orange
                                                        :weight bold))))
    `(edts-face-error-line ((t (:background unspecified
-                                           :inherit flymake-errline))))
+                                           :inherit flymake-error))))
    `(edts-face-error-mode-line ((,class (:background unspecified
                                                      :foreground ,red
                                                      :weight bold))))
@@ -154,7 +147,7 @@
    `(isearch ((,class (:foreground ,yellow
                                    :background ,background
                                    :inverse-video t))))
-   `(isearch-lazy-highlight-face ((,class (:foreground ,aqua
+   `(lazy-highlight ((,class (:foreground ,aqua
                                                        :background ,background
                                                        :inverse-video t))))
    `(isearch-fail ((,class (:background ,background
@@ -162,7 +155,7 @@
                                         :inverse-video t))))
    ;; Anzu
    `(anzu-mode-line ((,class (:foreground ,orange))))
-   `(anzu-replace-highlight ((,class (:inherit isearch-lazy-highlight-face))))
+   `(anzu-replace-highlight ((,class (:inherit lazy-highlight))))
    `(anzu-replace-to ((,class (:inherit isearch))))
    ;; iedit
    `(iedit-occurrence ((,class (:inverse-video t))))
@@ -879,6 +872,8 @@
    `(completions-highlight ((,class
                              (:background ,orange
                                           :foreground "black"))))
+	 `(completions-annotations ((,class
+                             (:foreground "LightCoral"))))
    `(completions-common-part ((,class
                                (:foreground "#6363b8b8ffff"))))
    `(help-key-binding ((,class
