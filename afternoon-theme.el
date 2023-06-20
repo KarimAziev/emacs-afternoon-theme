@@ -872,7 +872,7 @@
    `(completions-highlight ((,class
                              (:background ,orange
                                           :foreground "black"))))
-	 `(completions-annotations ((,class
+   `(completions-annotations ((,class
                              (:foreground "LightCoral"))))
    `(completions-common-part ((,class
                                (:foreground "#6363b8b8ffff"))))
@@ -881,11 +881,11 @@
    `(popup-face
      ((,class
        (:background "gray2"
-										:foreground "#fafafafad2d2"))))
+                    :foreground "#fafafafad2d2"))))
    `(popup-summary-face
      ((,class
        (:background "black"
-										:foreground "#eeeedddd8282"))))
+                    :foreground "#eeeedddd8282"))))
    `(popup-scroll-bar-foreground-face
      ((,class
        (:background "#696969696969"))))
@@ -903,9 +903,9 @@
      ((,class
        (:background "black"
                     :foreground "#fafafafad2d2"))))
-	 `(Man-overstrike ((,class (:foreground ,orange))))
-	 `(Man-reverse ((,class (:inherit success))))
-	 `(Man-underline ((,class (:inherit (underline font-lock-builtin-face))))))
+   `(Man-overstrike ((,class (:foreground ,orange))))
+   `(Man-reverse ((,class (:inherit success))))
+   `(Man-underline ((,class (:inherit (underline font-lock-builtin-face))))))
   (custom-theme-set-variables
    'afternoon
    `(fci-rule-color ,current-line)
@@ -936,44 +936,44 @@
                                       bold-italic bold])))
 
 (defun afternoon-custom-theme-to-source ()
-	"Copy `custom-set-faces' as source code."
-	(interactive)
-	(when (file-exists-p custom-file)
-		(let ((items (with-temp-buffer (insert-file-contents custom-file)
-																	 (let ((sexps)
-																				 (sexp))
-																		 (goto-char (point-min))
-																		 (while
-																				 (setq sexp
-																							 (ignore-errors
-																								 (read
-																									(current-buffer))))
-																			 (pcase sexp
-																				 (`(custom-set-faces . ,body)
-																					(push body
-																								sexps))))
-																		 (car sexps))))
-					(result)
-					(str))
-			(dolist (body items)
-				(while (memq (car-safe body) '(quote function))
-					(setq body (cadr body)))
-				(when (eq (caaadr body) t)
-					(let ((spec (cadr (caadr body))))
-						(push `(,(car body)
-										((`,class ,spec)))
-									result))))
-			(setq str (replace-regexp-in-string "`,class[\s]" ",class "
-																					(mapconcat (lambda (i)
-																											 (concat
-																												"`"
-																												(prin1-to-string
-																												 i)))
-																										 (reverse result) "\n")))
-			(kill-new str)
-			(momentary-string-display (concat "\n" str "\n")
-																(point))
-			str)))
+  "Copy `custom-set-faces' as source code."
+  (interactive)
+  (when (file-exists-p custom-file)
+    (let ((items (with-temp-buffer (insert-file-contents custom-file)
+                                   (let ((sexps)
+                                         (sexp))
+                                     (goto-char (point-min))
+                                     (while
+                                         (setq sexp
+                                               (ignore-errors
+                                                 (read
+                                                  (current-buffer))))
+                                       (pcase sexp
+                                         (`(custom-set-faces . ,body)
+                                          (push body
+                                                sexps))))
+                                     (car sexps))))
+          (result)
+          (str))
+      (dolist (body items)
+        (while (memq (car-safe body) '(quote function))
+          (setq body (cadr body)))
+        (when (eq (caaadr body) t)
+          (let ((spec (cadr (caadr body))))
+            (push `(,(car body)
+                    ((`,class ,spec)))
+                  result))))
+      (setq str (replace-regexp-in-string "`,class[\s]" ",class "
+                                          (mapconcat (lambda (i)
+                                                       (concat
+                                                        "`"
+                                                        (prin1-to-string
+                                                         i)))
+                                                     (reverse result) "\n")))
+      (kill-new str)
+      (momentary-string-display (concat "\n" str "\n")
+                                (point))
+      str)))
 
 ;;;###autoload
 (when (and (boundp 'custom-theme-load-path)
