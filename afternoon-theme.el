@@ -136,7 +136,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                               :color ,red)))))
        `(flycheck-warning ((,class (:underline (:style wave
                                                 :color ,orange)))))
-                                                ;; Clojure errors
+       ;; Clojure errors
        `(clojure-test-failure-face
          ((,class (:background unspecified
                    :inherit flymake-warning))))
@@ -145,7 +145,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(clojure-test-success-face ((,class (:background unspecified
                                              :foreground unspecified
                                              :underline ,green))))
-                                             ;; EDTS errors
+       ;; EDTS errors
        `(edts-face-warning-line ((t (:background unspecified
                                      :inherit flymake-warning))))
        `(edts-face-warning-mode-line ((,class (:background unspecified
@@ -156,7 +156,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(edts-face-error-mode-line ((,class (:background unspecified
                                              :foreground ,red
                                              :weight bold))))
-                                             ;; For Brian Carper's extended clojure syntax table
+       ;; For Brian Carper's extended clojure syntax table
        `(clojure-keyword ((,class (:foreground ,yellow))))
        `(clojure-parens ((,class (:foreground ,foreground))))
        `(clojure-braces ((,class (:foreground ,green))))
@@ -192,7 +192,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(isearch-fail ((,class (:background ,background
                                 :inherit font-lock-warning-face
                                 :inverse-video t))))
-                                ;; Anzu
+       ;; Anzu
        `(anzu-mode-line ((,class (:foreground ,orange))))
        `(anzu-replace-highlight ((,class (:inherit lazy-highlight))))
        `(anzu-replace-to ((,class (:inherit isearch))))
@@ -206,8 +206,8 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                                   unspecified))))
        `(ivy-yanked-word ((,class (:foreground ,yellow
                                    :background unspecified))))
-                                   ;; ivy-cursor
-                                   ;; IDO
+       ;; ivy-cursor
+       ;; IDO
        `(ido-subdir ((,class (:foreground ,purple))))
        `(ido-first-match ((,class (:foreground ,orange))))
        `(ido-only-match ((,class (:foreground ,green))))
@@ -219,10 +219,10 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                       :foreground ,yellow
                                       :weight bold
                                       :underline nil))))
-                                      ;; which-function
+       ;; which-function
        `(which-func ((,class (:foreground ,blue
                               :background unspecified))))
-                              ;; Emacs interface
+       ;; Emacs interface
        `(cursor ((,class (:background ,red))))
        `(fringe ((,class (:background ,current-line))))
        `(linum ((,class (:background ,current-line
@@ -279,12 +279,12 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                   :foreground ,selection))))
        `(whitespace-hspace ((,class (:background unspecified
                                      :foreground ,selection))))
-                                     ;; Parenthesis matching (built-in)
+       ;; Parenthesis matching (built-in)
        `(show-paren-match-face ((,class (:background "dodgerblue1"
                                          :foreground "white"))))
        `(show-paren-mismatch-face ((,class (:background "red1"
                                             :foreground "white"))))
-                                            ;; Smartparens paren matching
+       ;; Smartparens paren matching
        `(sp-show-pair-match-face
          ((,class
            (:foreground unspecified
@@ -295,7 +295,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                               unspecified
                                               :inherit
                                               show-paren-mismatch))))
-                                              ;; Parenthesis matching (mic-paren)
+       ;; Parenthesis matching (mic-paren)
        `(paren-face-match ((,class (:foreground unspecified
                                     :background unspecified
                                     :inherit show-paren-match))))
@@ -307,7 +307,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
          ((,class (:foreground unspecified
                    :background unspecified
                    :inherit show-paren-mismatch))))
-                   ;; Parenthesis dimming (parenface)
+       ;; Parenthesis dimming (parenface)
        `(paren-face ((,class (:foreground ,comment
                               :background unspecified))))
        `(sh-heredoc ((,class (:foreground unspecified
@@ -350,7 +350,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(ediff-odd-diff-B  ((,class (:foreground ,comment
                                      :background unspecified
                                      :inverse-video t))))
-                                     ;; macrostep
+       ;; macrostep
        `(macrostep-expansion-highlight-face ((,class (:foreground unspecified))))
        ;; undo-tree
        `(undo-tree-visualizer-default-face ((,class (:foreground ,foreground))))
@@ -394,7 +394,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(diredp-symlink ((,class (:foreground "#000068688b8b"))))
        `(diredp-write-priv ((,class (:foreground ,yellow
                                      :background unspecified))))
-                                     ;; Magit (a patch is pending in magit to make these standard upstream)
+       ;; Magit (a patch is pending in magit to make these standard upstream)
        `(magit-branch ((,class (:foreground ,green))))
        `(magit-diff-add ((,class (:inherit diff-added))))
        `(magit-diff-del ((,class (:inherit diff-removed))))
@@ -421,7 +421,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(magit-log-sha1 ((,class (:foreground ,yellow))))
        `(magit-section-title ((,class (:foreground ,blue
                                        :weight bold))))
-                                       ;; git-gutter
+       ;; git-gutter
        `(git-gutter:modified ((,class (:foreground ,purple
                                        :weight bold))))
        `(git-gutter:added ((,class (:foreground ,green
@@ -448,7 +448,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
             (:line-width (3 . 1)
              :color "black"
              :style flat-button)))))
-             ;; Compilation (most faces politely inherit from 'success, 'error, 'warning etc.)
+       ;; Compilation (most faces politely inherit from 'success, 'error, 'warning etc.)
        `(compilation-column-number ((,class (:foreground ,yellow))))
        `(compilation-line-number ((,class (:foreground ,yellow))))
        `(compilation-message-face ((,class (:foreground ,blue))))
@@ -467,7 +467,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(regex-tool-matched-face ((,class (:foreground unspecified
                                            :background unspecified
                                            :inherit match))))
-                                           ;; mark-multiple
+       ;; mark-multiple
        `(mm/master-face ((,class (:inherit region
                                   :foreground unspecified
                                   :background unspecified))))
@@ -523,7 +523,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        ;; Python-specific overrides
        `(py-builtins-face ((,class (:foreground ,orange
                                     :weight normal))))
-                                    ;; js2-mode
+       ;; js2-mode
        `(js2-warning ((,class (:underline ,orange))))
        `(js2-error ((,class (:foreground unspecified
                              :underline ,red))))
@@ -620,7 +620,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                 :background ,selection))))
        `(powerline-active2 ((t (:foreground ,foreground
                                 :background ,current-line))))
-                                ;; Outline
+       ;; Outline
        `(outline-1 ((,class (:inherit nil
                              :foreground "SkyBlue1"))))
        `(outline-2 ((,class (:inherit nil
@@ -639,7 +639,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                              :foreground "turquoise2"))))
        `(outline-9 ((,class (:inherit nil
                              :foreground "LightSteelBlue1"))))
-                             ;; Ledger-mode
+       ;; Ledger-mode
        `(ledger-font-comment-face ((,class (:inherit font-lock-comment-face))))
        `(ledger-font-occur-narrowed-face ((,class (:inherit
                                                    font-lock-comment-face
@@ -692,7 +692,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(mu4e-highlight-face ((,class (:inherit highlight))))
        `(mu4e-title-face ((,class (:inherit nil
                                    :foreground ,green))))
-                                   ;; Gnus
+       ;; Gnus
        `(gnus-cite-1 ((,class (:inherit outline-1
                                :foreground unspecified))))
        `(gnus-cite-2 ((,class (:inherit outline-2
@@ -709,7 +709,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                :foreground unspecified))))
        `(gnus-cite-8 ((,class (:inherit outline-8
                                :foreground unspecified))))
-                               ;; there are several more -cite- faces...
+       ;; there are several more -cite- faces...
        `(gnus-header-content ((,class (:inherit message-header-other))))
        `(gnus-header-subject ((,class (:inherit message-header-subject))))
        `(gnus-header-from ((,class (:inherit message-header-other-face
@@ -806,7 +806,7 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                            :foreground ,comment))))
        `(gnus-group-news-6-empty ((,class (:inherit gnus-group-news-6
                                            :foreground ,comment))))
-                                           ;; emms
+       ;; emms
        `(emms-playlist-selected-face ((,class (:foreground ,orange))))
        `(emms-playlist-track-face ((,class (:foreground ,blue))))
        `(emms-browser-track-face ((,class (:foreground ,blue))))
@@ -818,11 +818,11 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                        (:inherit emms-browser-artist-face))))
        `(emms-browser-album-face ((,class (:foreground ,green
                                            :height 1.2))))
-                                           ;; stripe-buffer
+       ;; stripe-buffer
        `(stripe-highlight ((,class (:background ,current-line))))
        `(stripe-hl-line ((,class (:background ,selection
                                   :foreground ,foreground))))
-                                  ;; erc
+       ;; erc
        `(erc-direct-msg-face ((,class (:foreground ,orange))))
        `(erc-error-face ((,class (:foreground ,red))))
        `(erc-header-face ((,class (:foreground ,foreground
@@ -849,20 +849,20 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(twittering-timeline-footer-face
          ((,class
            (:inherit twittering-timeline-header-face))))
-       `(custom-button ((,class (:box (:line-width 1
-                                       :foreground "khaki1")
-                                 :background "#000000"
-                                 :foreground "khaki1"))))
-       `(custom-button-pressed ((,class (:box (:line-width 1
-                                               :foreground
-                                               "#d3d3d3d3d3d3")
-                                         :background "#000000"
-                                         :foreground "#d3d3d3d3d3d3"))))
-       `(custom-button-mouse ((,class (:box
-                                       (:line-width 1
-                                        :foreground "#d3d3d3d3d3d3")
-                                       :background "#0a0a0a0a0a0a"
-                                       :foreground "#d3d3d3d3d3d3"))))
+       ;; `(custom-button ((,class (:box (:line-width 1
+       ;;                                 :foreground "khaki1")
+       ;;                           :background "#000000"
+       ;;                           :foreground "khaki1"))))
+       ;; `(custom-button-pressed ((,class (:box (:line-width 1
+       ;;                                         :foreground
+       ;;                                         "#d3d3d3d3d3d3")
+       ;;                                   :background "#000000"
+       ;;                                   :foreground "#d3d3d3d3d3d3"))))
+       ;; `(custom-button-mouse ((,class (:box
+       ;;                                 (:line-width 1
+       ;;                                  :foreground "#d3d3d3d3d3d3")
+       ;;                                 :background "#0a0a0a0a0a0a"
+       ;;                                 :foreground "#d3d3d3d3d3d3"))))
        `(custom-button-unraised ((,class (:background "#0a0a0a0a0a0a"
                                           :foreground "white"))))
        `(custom-variable-tag ((,class (:foreground ,blue))))
