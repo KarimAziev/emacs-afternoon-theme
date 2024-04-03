@@ -849,20 +849,18 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(twittering-timeline-footer-face
          ((,class
            (:inherit twittering-timeline-header-face))))
-       ;; `(custom-button ((,class (:box (:line-width 1
-       ;;                                 :foreground "khaki1")
-       ;;                           :background "#000000"
-       ;;                           :foreground "khaki1"))))
-       ;; `(custom-button-pressed ((,class (:box (:line-width 1
-       ;;                                         :foreground
-       ;;                                         "#d3d3d3d3d3d3")
-       ;;                                   :background "#000000"
-       ;;                                   :foreground "#d3d3d3d3d3d3"))))
-       ;; `(custom-button-mouse ((,class (:box
-       ;;                                 (:line-width 1
-       ;;                                  :foreground "#d3d3d3d3d3d3")
-       ;;                                 :background "#0a0a0a0a0a0a"
-       ;;                                 :foreground "#d3d3d3d3d3d3"))))
+       `(custom-button ((,class (:box (:line-width (3 . 1)
+                                       :style released-button
+                                       :color "khaki1")
+                                 :foreground "khaki1"))))
+       `(custom-button-pressed ((,class (:box (:line-width (3 . 1)
+                                               :style pressed-button
+                                               :color ,orange)
+                                         :foreground ,orange))))
+       `(custom-button-mouse ((,class (:box (:line-width (3 . 1)
+                                             :style pressed-button
+                                             :color "khaki1")
+                                       :foreground "khaki1"))))
        `(custom-button-unraised ((,class (:background "#0a0a0a0a0a0a"
                                           :foreground "white"))))
        `(custom-variable-tag ((,class (:foreground ,blue))))
