@@ -219,6 +219,13 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
                                       :foreground ,yellow
                                       :weight bold
                                       :underline nil))))
+       ;; vertico
+       `(vertico-current ((,class (:foreground "black"
+                                   :background "#65a7e2"
+                                   :extend t))))
+       `(completions-common-part ((,class (:foreground "GhostWhite"
+                                           :background "#555555"
+                                           :weight bold))))
        ;; which-function
        `(which-func ((,class (:foreground ,blue
                               :background unspecified))))
