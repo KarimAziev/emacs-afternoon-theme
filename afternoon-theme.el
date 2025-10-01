@@ -253,6 +253,8 @@ Default value of COLORS-ALIST is `afternoon-custom-colors'."
        `(mode-line-emphasis ((,class (:foreground ,foreground
                                       :slant italic))))
        `(minibuffer-prompt ((,class (:foreground ,blue))))
+       `(minibuffer-nonselected ((,class (:foreground "dark gray"
+                                          :background ,block-background))))
        `(region ((,class (:background ,selection
                           :foreground "gold"))))
        `(secondary-selection ((,class (:background ,current-line))))
